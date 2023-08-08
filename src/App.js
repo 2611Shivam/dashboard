@@ -5,7 +5,7 @@ import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { Navbar, Footer, Sidebar, ThemeSettings } from "./components";
 import {
-  Calander,
+ 
   ColorPicker,
   Customers,
   Ecommerce,
@@ -24,8 +24,12 @@ import {
   Calendar,
 } from "./pages";
 
+import {useStateContext} from './contexts/ContextProvider'
+
 const App = () => {
-  const activeMenu = false;
+  const {activeMenu}=useStateContext();
+
+  
   return (
     <div>
       <BrowserRouter>
